@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bishwa</title>
+  <style>
+	.div-class
+	{
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 10px;
+	}
+  </style>
+</head>
+
+<body>
+  <h1>Todo list</h1>
+
+  <div>
+    <input type="text" id="inputid1"></input>
+    <button   onclick="addTodo()">Add Todo</button>
+  </div>
+</body>
+
+<script>
+
+	let ctr = 0;
+	function addTodo()
+	{
+		const inputEl = document.querySelector("#inputid1");
+		const value = inputEl.value.trim();
+		
+		if (value === "") 
+		{
+			alert("Please enter a todo item.");
+			return;
+		}
+
+		const newDivEl = document.createElement("div");
+		newDivEl.setAttribute("id","todo-"+ctr);
+		newDivEl.setAttribute("class","div-class");
+		newDivEl.innerHTML = "<div>" + value + "</div> <button onclick='deleteTodo("+ctr+")' style='margin-left:10px;'>Delete</button> <button onclick='editTodo("+ctr+")' style='margin-left:10px;'>Edit</button>";
+
+		document.querySelector("body").appendChild(newDivEl);
+		inputEl.value = ""; // Clear input field after adding
+		ctr = ctr+1;
+	}
+
+	function deleteTodo(index)
+	{
+		const eleToDel = document.querySelector("#todo-"+index);
+		eleToDel.parentNode.removeChild(eleToDel);
+	}
+
+
+
+	function editTodo(index)
+	{
+		const eleToEd = document.querySelector("#todo-"+index);
+
+		eleToEd.innerHTML = '<input type="text" id="edit-input-'+ index +'"></input><button onclick="addTodo1('+index+')">Add Todo</button>';
+	}
+	function addTodo1(index)
+	{
+		const ediEle = document.querySelector("#edit-input-"+index);
+		const ediValue = ediEle.value;
+
+		if (ediValue === "") 
+		{
+			alert("Please enter a todo item.");
+			return;
+		}
+
+		const eleToEd = document.querySelector("#todo-"+index);
+		eleToEd.innerHTML = "<div>" + ediValue + "</div> <button onclick='deleteTodo("+index+")' style='margin-left:10px;'>Delete</button> <button onclick='editTodo("+index+")' style='margin-left:10px;'>Edit</button>";
+		
+
+	}
+
+
+</script>
+
+</html>

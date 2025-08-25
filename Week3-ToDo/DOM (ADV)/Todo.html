@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .divclass{
+            display:flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+        .btnc{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+  <input type="text"></input>
+  <button onclick="addTodo()">Add todo!</button>
+  <div id="tododiv"></div>
+
+
+
+
+
+  <script>
+    let todos = [];
+
+    function addTodo() {
+      todos.push({
+        title: document.querySelector("input").value
+      })
+      render();
+      document.querySelector("input").value="";
+    }
+
+    function deleteTodo(i) {
+      todos.splice(i,1)
+      render();
+    }
+
+    function updateTodo(i){
+        
+    }
+
+    function createTodo(todos,i)
+    {
+        const div = document.createElement("div");
+        div.setAttribute("class","divclass");
+        const span = document.createElement("span");
+        const button = document.createElement("button");
+        const update = document.createElement("button");
+
+        span.textContent = todos.title;
+        button.textContent = "Delete";
+        button.setAttribute("onclick","deleteTodo("+ i +")")
+        button.setAttribute("class","btnc");
+
+        update.textContent = "Update";
+        update.setAttribute("onclick","updateTodo("+ i +")")
+        update.setAttribute("class","btnc");
+
+        div.appendChild(span)
+        div.appendChild(button)
+        div.appendChild(update)
+
+        return div
+    }
+
+
+    function render() {
+      document.querySelector("#tododiv").innerHTML=""
+      for(let i=0; i<todos.length; i++)
+      {
+        const element = createTodo(todos[i],i)
+        document.querySelector("#tododiv").appendChild(element)
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>
