@@ -1,6 +1,6 @@
 
 
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Outlet, useNavigate } from "react-router-dom";
 
 function App() {
 
@@ -81,8 +81,15 @@ function Class11Program() {
 }
 
 function Class12Program() {
+  const navigate = useNavigate()
+
+  function redirectUser(){
+    navigate("/")
+  }
+
   return <div>
       NEET programs for Class 12th
+      <button onClick={redirectUser}>Go back to Landing Page</button>
   </div>
 }
 
