@@ -4,7 +4,7 @@ import './App.css'
 
 
 
-function useDebounce(value){
+function useDebounce(url){
   
   const currentClock = useRef()
 
@@ -12,7 +12,7 @@ function useDebounce(value){
   const fn = ()=> {
     clearTimeout(currentClock.current)
 
-    currentClock.current = setTimeout(value, 200)
+    currentClock.current = setTimeout(url, 200)
   }
 
   return fn
