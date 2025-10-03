@@ -39,3 +39,23 @@ css
 ```
 
 
+## Flex (justify-content) in tailwind css
+- Link to official documentation [Tailwind CSS Documentation](https://tailwindcss.com/docs/justify-content)
+
+
+```javascript
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <div className ='flex justify-around'>
+        <div className='bg-red-300'>CHILD 1</div>
+        <div className='bg-green-300'>CHILD 2</div>
+        <div className='bg-blue-300'>CHILD 3</div>
+      </div>
+    </>
+  )
+}
+```
