@@ -137,6 +137,7 @@ Where this approach surprises people most often is that to style something for m
 </div>
 ```
 <br/>
+
 - Responsive-Design example 2
 
 ```javascript
