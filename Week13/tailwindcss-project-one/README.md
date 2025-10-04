@@ -127,3 +127,29 @@ Where this approach surprises people most often is that to style something for m
 | lg  | 64rem (1024px) | @media (width >= 64rem) { ... } |
 | xl  | 80rem (1280px) | @media (width >= 80rem) { ... } |
 | 2xl | 96rem (1536px) | @media (width >= 96rem) { ... } |
+
+<br/>
+
+- Responsive-Design example 1 
+```javascript
+<div className ='xl:bg-yellow-300 md:bg-green-300 sm:bg-blue-300 bg-red-300'>
+  Hi there
+</div>
+```
+<br/>
+- Responsive-Design example 1 
+```javascript
+function App() {
+
+
+  return (
+    <>
+      <div className ='sm:grid grid-cols-12'>
+        <div className='bg-red-300 col-span-4'>CHILD 1</div>
+        <div className='bg-green-300 col-span-4'>CHILD 2</div>
+        <div className='bg-blue-300 col-span-4'>CHILD 3</div>
+      </div>
+    </>
+  )
+}
+```

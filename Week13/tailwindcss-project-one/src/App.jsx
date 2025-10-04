@@ -7,8 +7,10 @@ function App() {
 
   return (
     <>
-      <div className ='xl:bg-yellow-300 md:bg-green-300 sm:bg-blue-300 bg-red-300'>
-        Hi there
+      <div className ='sm:grid grid-cols-12'>
+        <div className='bg-red-300 col-span-4'>CHILD 1</div>
+        <div className='bg-green-300 col-span-4'>CHILD 2</div>
+        <div className='bg-blue-300 col-span-4'>CHILD 3</div>
       </div>
     </>
   )
