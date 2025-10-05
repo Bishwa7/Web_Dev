@@ -16,3 +16,11 @@ npx tsc --init
 ```
 - now create index.ts
 
+- to compile typescript to and generate javascript using tsc compiler
+```
+npx tsc -b
+```
+- now run index.js
+```
+node index.js
+```
