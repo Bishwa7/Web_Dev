@@ -1,4 +1,4 @@
-# TypeScript Project One
+# TypeScript Interfaces One
 
 ## Initializing Project
 
