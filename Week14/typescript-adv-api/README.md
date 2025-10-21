@@ -1,0 +1,4 @@
+# Typescript-adv-api
+
+* Pick
+    * Pick allows you to create a new type by selecting a set of properties (Keys) from an existing type (Type).
