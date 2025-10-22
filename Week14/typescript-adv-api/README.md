@@ -28,3 +28,38 @@
 * Readonly
     * When you have a configuration object that should not be altered after initialization, making it Readonly ensures its
     properties cannot be changed.
+
+* Record
+    * Record let’s you give a cleaner type to objects
+    ```typescript
+        // You can type objects like follows - 
+
+        interface User {
+            id: string;
+            name: string;
+        }
+
+        type Users = { [key: string]: User };
+
+        const users: Users = {
+            'abc123': { id: 'abc123', name: 'John Doe' },
+            'xyz789': { id: 'xyz789', name: 'Jane Doe' },
+        };
+    ```
+    ```typescript
+        // or use Record
+        
+        interface User {
+            id: string;
+            name: string;
+        }
+
+        type Users = Record<string, User>;
+
+        const users: Users = {
+            'abc123': { id: 'abc123', name: 'John Doe' },
+            'xyz789': { id: 'xyz789', name: 'Jane Doe' },
+        };
+
+        console.log(users['abc123']); // Output: { id: 'abc123', name: 'John Doe' }
+    ```
