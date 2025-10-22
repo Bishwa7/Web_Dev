@@ -48,7 +48,7 @@
     ```
     ```typescript
         // or use Record
-        
+
         interface User {
             id: string;
             name: string;
@@ -63,3 +63,9 @@
 
         console.log(users['abc123']); // Output: { id: 'abc123', name: 'John Doe' }
     ```
+
+
+* Map
+    * maps gives you an even fancier way to deal with objects.
+    * it is a javascript concept
+    

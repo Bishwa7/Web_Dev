@@ -1,1 +1,1 @@
-{"root":["./src/01_pick.ts","./src/02_partial.ts","./src/03_readonly.ts","./src/04_record.ts"],"version":"5.9.3"}
+{"root":["./src/01_pick.ts","./src/02_partial.ts","./src/03_readonly.ts","./src/04_record.ts","./src/05_map.ts"],"version":"5.9.3"}
