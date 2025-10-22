@@ -68,4 +68,7 @@
 * Map
     * maps gives you an even fancier way to deal with objects.
     * it is a javascript concept
-    
+
+* Exclude
+    * In a function that can accept several types of inputs but you want to exclude specific types from being passed to it.
+
