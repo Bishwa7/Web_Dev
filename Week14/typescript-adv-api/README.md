@@ -72,3 +72,6 @@
 * Exclude
     * In a function that can accept several types of inputs but you want to exclude specific types from being passed to it.
 
+* Type Inference in Zod
+    * When using zod, we’re done runtime validation. For example, the code(07_typeInferenceInZod.ts) makes sure that the user is sending the right inputs to update their profile information
+    * More details - [https://zod.dev/?id=type-inference](https://zod.dev/?id=type-inference)
