@@ -72,6 +72,7 @@ export default defineConfig({
 ## Step 2 -
 
 - changed output in prisma/schema.prisma
+- PrismaClient is in src/index.ts for this project you can make a seperate file for it in src/lib/prismaClient.ts 
 - intalled tsup (npm install tsup) and added scripts in package.json
 
 ```
