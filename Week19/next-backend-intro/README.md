@@ -24,4 +24,5 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 - user/page.tsx : CSR component to fetch user data
 - user-server/page.tsx : SSR component to fetch user data
-
+- api/v1/user/details/page.tsx : Backend Get() endpoint for user details
+- user-local/route.ts : Component to fetch data form local nextjs backend
